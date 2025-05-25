@@ -8,4 +8,4 @@ def homepage():
 
 @app.route("/sobre")
 def sobre():
-    return "Sobre é uma rota boa"
+    return render_template("sobre.html")
