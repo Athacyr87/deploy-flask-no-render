@@ -4,16 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pasta Sobre</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <h1>Vamos criar uma cálculadora</h1>
     <p>Vamos nessa</p>
 
-    <button onclick="minhafuncao()">Clicar</button>
+    <!-- Aqui var aparecer o número-->
+     <p id="display">|</p>
+
+     <div>
+        <button id="CE" onclick="limparDisplay()">CE</button><br>
+        <button class="button_calculadora" onclick="inserirNumero(7)">7</button>
+        <button class="button_calculadora" onclick="inserirNumero(8)">8</button>
+        <button class="button_calculadora" onclick="inserirNumero(9)">9</button><br>
+        <button class="button_calculadora" onclick="inserirNumero(4)">4</button>
+        <button class="button_calculadora" onclick="inserirNumero(5)">5</button>
+        <button class="button_calculadora" onclick="inserirNumero(6)">6</button><br>
+        <button class="button_calculadora" onclick="inserirNumero(1)">1</button>
+        <button class="button_calculadora" onclick="inserirNumero(2)">2</button>
+        <button class="button_calculadora" onclick="inserirNumero(3)">3</button><br>
+        <button class="button_calculadora" onclick="inserirNumero(0)">0</button>
+        
+
+        
+     </div>
+
 
     <script>
-        function minhafuncao(){
-            alert("Você clicou!!!")
+        function inserirNumero(num){
+            document.getElementById('display').innerText += num;
+        }
+        function limparDisplay(){
+            document.getElementById('display').innerText = '|';
         }
     </script>
 
